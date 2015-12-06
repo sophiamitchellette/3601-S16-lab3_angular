@@ -30,7 +30,7 @@ grunt test
 ```
 > If this doesn't work, please let a professor or DM know about it.
 
-You can also run your tests through the webstorm karma run configuration (right click karma.conf.js, etc.)
+You can also run your tests through the webstorm karma run configuration (right click karma.conf.js, etc.) If you're interested in setting this up talk to Professor KK or a lab assistant.
 
 ##Resoures
 #####Bootstrap Components:
