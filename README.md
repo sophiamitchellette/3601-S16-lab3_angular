@@ -1,4 +1,5 @@
-# angularLabExample
+# CSCI 3601 Lab #3 - Angular
+#### Spring 2016
 Playing with Node, Express and Angular.
 
 
