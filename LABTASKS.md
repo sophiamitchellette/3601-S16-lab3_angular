@@ -24,4 +24,17 @@ questions by editing this file.
 ##### Find two instances of use of bootstrap (see above) in either navbar view or index view or both; explain what is formatted. 
 ##### Stop the server by pressing Ctrl-C in the terminal, type "grunt test" to run tests. Where are the tests located? What are they testing? 
 
+## Part #2: modifying the project.
+
+- Currently clicking on "kittens" returns the "page under construction" message. Using the view about.html as a sample, add a page that has a navigation bar. Add an image of your choice to the page (be aware of copyright rules) and a div that describes the image). 
+- Explore bootstrap by changing formatting of the page (for instance, position of the image and text). It doesn't have to look nice, just different from what it currently is. 
+
+## Part #3: adding the GPA calculator.
+- Your goal is to add a page with a form that allows a student to add their courses (course name, number of credits, and letter grade) and displays their GPA. The GPA changes as courses are added or removed. As before, letter grades are A, B, C, D, and F only. 
+- The controller for the GPA needs to be added to main.controller.js. Think of what needs to be in its scope. 
+- Add the necessary view, include the navbar into it, and then add the GPA calculator. Add one feature at a time, make sure everything is working as it should. 
+- As before, use TDD for all the helper functions (you may reuse the tests from the previous lab). Now they will all be located in public (client-side). No need to modify karma files since it's already testing client-side javascript. 
+- Use different color for displaying the GPA, depending on whether it is below 2.0, between 2.0 and 3.0, and 3.0 and above. Use your own CSS or bootstrap. 
+- Perform simple data validation (add the corresponding function to the controller) so that invalid entries (invalid grades or wrong number of credits) are not added to the model. An error message needs to be displayed to the user). 
+
 
