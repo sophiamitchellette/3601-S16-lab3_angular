@@ -1,6 +1,8 @@
 # CSCI 3601 Lab #3 - Angular
-Playing with Node, Express and Angular.
+In this lab you will learn to use AngularJS. 
 
+
+Your specific tasks for this lab can be found in the [LABTASKS.md](LABTASKS.md) file in this repository.
 
 #Setup:
 Install dependencies with npm and bower by running:
