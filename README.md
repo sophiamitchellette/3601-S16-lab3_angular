@@ -1,5 +1,6 @@
 # CSCI 3601 Lab #3 - Angular
-In this lab you will learn to use AngularJS. 
+In this lab you will learn to use AngularJS to simplify the addition of interactive elements such as forms to your
+projects, as well as 
 
 
 Your specific tasks for this lab can be found in the [LABTASKS.md](LABTASKS.md) file in this repository.
