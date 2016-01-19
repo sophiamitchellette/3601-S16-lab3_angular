@@ -34,6 +34,10 @@ grunt test
 
 You can also run your tests through the webstorm karma run configuration (right click karma.conf.js, etc.) If you're interested in setting this up talk to Professor KK or a lab assistant.
 
+#Continuous Integration with Travis (Part 2)
+
+Add stuff here.
+
 ##Resoures
 #####Bootstrap Components:
 http://getbootstrap.com/components/
