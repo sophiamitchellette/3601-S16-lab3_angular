@@ -55,7 +55,7 @@ before_script:
 - Modify the `bower.json` file.
   - On line 5, there is an author array. Chnage that from Joe to you, and your group members. People should be separated by commas.
 
-> Protip: From here, the rest is the same process as in lab 2. Refer to that lab if you have forgotten.
+> Protip: From here, the rest is the same process as in lab 2. Refer to that lab if you have forgotten. This time though, you will add a build status image to the README.md rather than updating the old.
 
 
 ##Resoures
