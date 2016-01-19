@@ -34,6 +34,12 @@ grunt test
 
 You can also run your tests through the webstorm karma run configuration (right click karma.conf.js, etc.) If you're interested in setting this up talk to Professor KK or a lab assistant.
 
+#Reviewing Test Coverage
+
+Every time you run your tests, a test coverage report will be generated. This lets you know how much of your code yours tests reach. To check this out, look in the `coverage` folder, then within the folder inside of that (it has a long name). From there, open the `index.html` file in the browser of your choosing.
+
+> Protip: Check this frequently. Especially when you want to consider specific functionality "completed".
+
 #Continuous Integration with Travis (Part 2)
 
 We're bringing back Travis for this lab (and the rest that you will do). This time, Travis will run Grunt whenver is performs a build in order to run your tests.
@@ -51,9 +57,9 @@ before_script:
  - 'bower install'
 ```
 - Modify the `package.json` file.
-  - On line 7, change the value of the test field to `"grunt test"`.
+  - On line 7, change the value of the `test` field to `"grunt test"`.
 - Modify the `bower.json` file.
-  - On line 5, there is an author array. Chnage that from Joe to you, and your group members. People should be separated by commas.
+  - On line 5, there is an author array. Change that from Joe to you, and your group members. People should be separated by commas.
 
 > Protip: From here, the rest is the same process as in lab 2. Refer to that lab if you have forgotten. This time though, you will add a build status image to the README.md rather than updating the old.
 
