@@ -36,7 +36,27 @@ You can also run your tests through the webstorm karma run configuration (right 
 
 #Continuous Integration with Travis (Part 2)
 
-Add stuff here.
+We're bringing back Travis for this lab (and the rest that you will do). This time, Travis will run Grunt whenver is performs a build in order to run your tests.
+
+We will have you do a bit more to get Travis set up this time around.
+What you need to do:
+- Add a .travis.yml file to the root of the repository.
+  - In it, add the following:
+```
+language: node_js
+node_js:
+ - "stable"
+before_script:
+ - 'npm install -g grunt-cli'
+ - 'bower install'
+```
+- Modify the `package.json` file.
+  - On line 7, change the value of the test field to `"grunt test"`.
+- Modify the `bower.json` file.
+  - On line 5, there is an author array. Chnage that from Joe to you, and your group members. People should be separated by commas.
+
+> Protip: From here, the rest is the same process as in lab 2. Refer to that lab if you have forgotten.
+
 
 ##Resoures
 #####Bootstrap Components:
