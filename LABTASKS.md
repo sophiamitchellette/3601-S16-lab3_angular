@@ -27,6 +27,7 @@ questions by editing this file.
 ## Part #2: modifying the project.
 
 - Set up Travis CI and add the build status icon to your project's README.
+  - This should have been done as part of the setup.
 
 - Currently clicking on "kittens" returns the "page under construction" message. Using the view about.html as a sample, add a page that has a navigation bar. Add an image of your choice to the page (be aware of copyright rules) and a div that describes the image). 
 - Explore bootstrap by changing formatting of the page (for instance, position of the image and text). It doesn't have to look nice, just different from what it currently is. 
