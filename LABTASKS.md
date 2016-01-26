@@ -13,16 +13,18 @@ questions by editing this file.
 - Observe elements formatting (it's done via bootstrap). As you are working on the questions below, experiment with the project to get a better sense for what each element is. 
 
 ##### List all the files at the top level of your project (i.e. not in public) and briefly state the purpose of each one, as you understand it. You might want to postpone describing some files until you work with the project a bit more. 
-##### Describe the structure of the "public" folder and its subfolders. 
-##### What folders exist in your local copy that are not a part of github repository? 
+##### List the folders in the public folder and describe what their purposes are for each.
 ##### Open the file main.controller.js in the javascript folder of public. What are the controllers there (by name)? 
 ##### Open the index.html view. What controller is it using? 
 ##### Where is the navigation bar included in the source code for index.html? 
-##### How is the list of pets generated? Mention specific Angular directives and calls to functions in the controller. Add a pet to the model (in the controller), see the change on the web page (you need to reload, but not restart). 
-##### How are new items added and deleted? Describe a sequence of functions that are called; where are these functions located, and how does index.html specify which functions are called? 
-##### Open navbar.html view. What is its purpose? How do links to pages get into the navigation bar? What happens (in the project) when I click on a link "about"? what happens when I click on "kittens"? Refer to app.js to explain your observations. 
+##### Add a pet to the array, data (in the controller). See the change on the web page (you need to reload, but not restart). 
+##### How are new items added and deleted through the web page? (i.e. - What functions from the main controller are used, and what Angular directives allow them to interact with the view?)
+##### Open navbar.html view. What is its purpose? How would you go about adding links to the navigation bar? 
 ##### Find two instances of use of bootstrap (see above) in either navbar view or index view or both; explain what is formatted. 
-##### Stop the server by pressing Ctrl-C in the terminal, type "grunt test" to run tests. Where are the tests located? What are they testing? 
+
+>Protip: Bootstrap is awesome. Start using it. Seriously. This allows you to do fancy things with styling (CSS) with very little effort. Think back to lab 1. [http://getbootstrap.com/components/]() <- Regular Bootstrap. [https://angular-ui.github.io/bootstrap/]() <- Angular Bootstrap. These offer separate functionality and both can be used simultaneously.
+
+##### Stop the server by pressing Ctrl-C in the terminal, type "grunt test" to run tests. Where are the tests located?
 
 ## Part #2: modifying the project.
 
