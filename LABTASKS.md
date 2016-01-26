@@ -22,7 +22,7 @@ questions by editing this file.
 ##### Open navbar.html view. What is its purpose? How would you go about adding links to the navigation bar? 
 ##### Find two instances of use of bootstrap (see above) in either navbar view or index view or both; explain what is formatted. 
 
->Protip: Bootstrap is awesome. Start using it. Seriously. This allows you to do fancy things with styling (CSS) with very little effort. Think back to lab 1. [http://getbootstrap.com/components/]() <- Regular Bootstrap. [https://angular-ui.github.io/bootstrap/]() <- Angular Bootstrap. These offer separate functionality and both can be used simultaneously.
+>Protip: Bootstrap is awesome. Start using it. Seriously. This allows you to do fancy things with styling (CSS) with very little effort. Think back to lab 1. http://getbootstrap.com/components/ <- Regular Bootstrap. https://angular-ui.github.io/bootstrap/ <- Angular Bootstrap. These offer separate functionality and both can be used simultaneously.
 
 ##### Stop the server by pressing Ctrl-C in the terminal, type "grunt test" to run tests. Where are the tests located?
 
