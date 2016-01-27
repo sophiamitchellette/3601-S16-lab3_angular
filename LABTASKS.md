@@ -9,16 +9,16 @@ questions by editing this file.
 
 > Protip: You'll need to start up the server before you can play with the website.
 
-- Click links on the navigation bar. See what happens. Note that when you move away from the page with pets, your changes to the list of pets are lost. This is because we are not storing the model in a database (this would be a part of the next lab). 
-- Observe elements formatting (it's done via bootstrap). As you are working on the questions below, experiment with the project to get a better sense for what each element is. 
+- Click links on the navigation bar. See what happens. Note that when you move away from the page with pets, your changes to the list of pets are lost. This is because we are not storing the array in a database (this will be a part of the next lab). 
+- Observe the HTML element's formatting (it's done via bootstrap). As you are working on the questions below, experiment with the project to get a better sense for what each element is. 
 
 ##### List all the files at the top level of your project (i.e. not in public) and briefly state the purpose of each one, as you understand it. You might want to postpone describing some files until you work with the project a bit more. 
-##### List the folders in the public folder and describe what their purposes are for each.
+##### List the folders in the public folder and describe the purpose for each.
 ##### Open the file main.controller.js in the javascript folder of public. What are the controllers there (by name)? 
 ##### Open the index.html view. What controller is it using? 
 ##### Where is the navigation bar included in the source code for index.html? 
 ##### Add a pet to the array, data (in the controller). See the change on the web page (you need to reload, but not restart). 
-##### How are new items added and deleted through the web page? (i.e. - What functions from the main controller are used, and what Angular directives allow them to interact with the view?)
+##### How are new items added and deleted through the web page? (i.e. - What functions from the main controller are used in index.html, and what Angular directives allow them to interact with the view?)
 ##### Open navbar.html view. What is its purpose? How would you go about adding links to the navigation bar? 
 ##### Find two instances of use of bootstrap (see above) in either navbar view or index view or both; explain what is formatted. 
 
@@ -31,8 +31,8 @@ questions by editing this file.
 - Set up Travis CI and add the build status icon to your project's README.
   - This should have been done as part of the setup.
 
-- Currently clicking on "kittens" returns the "page under construction" message. Using the view about.html as a sample, add a page that has a navigation bar. Add an image of your choice to the page (be aware of copyright rules) and a div that describes the image). 
-- Explore bootstrap by changing formatting of the page (for instance, position of the image and text). It doesn't have to look nice, just different from what it currently is. 
+- Currently clicking on "kittens" returns the "page under construction" message. Using the view about.html as a sample, add a page that has a navigation bar. Add an image of your choice to the page (be aware of copyright rules) and a div that describes the image. 
+- Explore bootstrap by changing formatting of the page (for instance, position of the image and text). It doesn't have to look "nice", just different from what it currently is. 
 
 ## Part #3: adding the GPA calculator.
 - Your goal is to add a page with a form that allows a student to add their courses (course name, number of credits, and letter grade) and displays their GPA. The GPA changes as courses are added or removed. As before, letter grades are A, B, C, D, and F only. 
