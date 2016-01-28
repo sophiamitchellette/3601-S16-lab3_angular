@@ -16,7 +16,7 @@
     <script type="text/javascript" src="javascript/main.controller.js"></script>
 </head>
 
-<body ng-app="mainApp" ng-controller="mainCtrl">
+<body ng-app="mainApp" ng-controller="mainCtrl as mainControl">
 
 <div ng-include="'views/navbar.html'"></div>
 
@@ -28,14 +28,14 @@
         <ul class="list-group">
             <li class="list-group-item">
 
-                <form ng-submit="addData()">
-                    <input ng-model="textField" type="text" size="50" placeholder="add a new item to the list!">
+                <form ng-submit="mainControl.addData()">
+                    <input ng-model="mainControl.textField" type="text" size="50" placeholder="add a new item to the list!">
                     <input type="submit" value="submit" class="btn btn-primary">
-                    <span class="floatRight">Items in this list: {{itemsInList()}}</span>
+                    <span class="floatRight">Items in this list: {{mainControl.itemsInList()}}</span>
                 </form>
 
             </li>
-            <li class="list-group-item" ng-repeat="test in data">{{test.text}}<span class="glyphicon glyphicon-trash floatRight" style="color: red" ng-click="removeData($index)"></span></li>
+            <li class="list-group-item" ng-repeat="test in mainControl.data">{{test.text}}<span class="glyphicon glyphicon-trash floatRight" style="color: red" ng-click="mainControl.removeData($index)"></span></li>
         </ul>
     </div>
 </body>

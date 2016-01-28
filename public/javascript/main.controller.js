@@ -1,10 +1,11 @@
 var mainApp = angular.module("mainApp", []);
 
 //====================== NAVBAR CONTROLLER ============================
-    mainApp.controller('navbarCtrl', function($scope){
-        console.log("controller loaded!");
+    mainApp.controller('navbarCtrl', function(){
+        var navbar = this;
+        console.log("Navbar controller loaded");
 
-        $scope.pages = [
+        navbar.pages = [
             {text: "Home", link: '/'},
             {text: "About", link: '/about'},
             {text: "Kittens", link: '/kittens'},
@@ -13,36 +14,37 @@ var mainApp = angular.module("mainApp", []);
     });
 
 //==================== MAIN CONTROLLER ==================================
-    mainApp.controller('mainCtrl', function($scope){
-       console.log("controller loaded!");
+    mainApp.controller('mainCtrl', function(){
+        var mainControl = this;
+        console.log("Main controller loaded!");
 
-       $scope.textField = "";
+        mainControl.textField = "";
 
-       // Normally, data like this would be stored in a database, and this controller would issue an http:get request for it.
-       $scope.data = [
-           {text: "fish"},
-           {text: "kittens"},
-           {text: "snake"},
-           {text: "badger"},
-           {text: "puppies"}
-       ];
+        // Normally, data like this would be stored in a database, and this controller would issue an http:get request for it.
+        mainControl.data = [
+            {text: "fish"},
+            {text: "kittens"},
+            {text: "snake"},
+            {text: "badger"},
+            {text: "puppies"}
+        ];
 
-       $scope.addData = function(){
-           if($scope.textField.length >= 1) {
-               $scope.data.push({text: $scope.textField});
-               $scope.textField = "";
-           }
-       };
+        mainControl.addData = function(){
+            if(mainControl.textField.length >= 1) {
+                mainControl.data.push({text: mainControl.textField});
+                mainControl.textField = "";
+            }
+        };
 
-       $scope.removeData = function(index){
-           $scope.data.splice(index, 1);
-       };
+        mainControl.removeData = function(index){
+            mainControl.data.splice(index, 1);
+        };
 
-       $scope.cat = function(str1, str2){
-           return str1 + str2;
-       };
+        mainControl.cat = function(str1, str2){
+            return str1 + str2;
+        };
 
-       $scope.itemsInList = function(){
-           return $scope.data.length;
-       };
+        mainControl.itemsInList = function(){
+            return mainControl.data.length;
+        };
     });

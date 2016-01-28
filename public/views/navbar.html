@@ -1,6 +1,6 @@
-<div id="navBar" ng-controller="navbarCtrl">
+<div id="navBar" ng-controller="navbarCtrl as navbar">
     <ul class="nav nav-pills">
-        <li role="presentation" ng-repeat="item in pages track by $index"><a href="{{item.link}}">{{item.text}}</a></li>
+        <li role="presentation" ng-repeat="item in navbar.pages track by $index"><a href="{{item.link}}">{{item.text}}</a></li>
     </ul>
 </div>
 
