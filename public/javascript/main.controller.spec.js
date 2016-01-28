@@ -11,7 +11,7 @@ describe('Testing controller: mainCtrl', function(){
     // Initialize the controller and mock scope.
     beforeEach(inject(function($controller, $rootScope) {
         scope = $rootScope.$new();
-        mainCtrl = $controller('mainCtrl', {
+        mainCtrl = $controller('mainCtrl as mainControl', {
             $scope: scope
         });
     }));
@@ -22,20 +22,20 @@ describe('Testing controller: mainCtrl', function(){
 
     describe("testing data functionality: ", function(){
         it("should contain some data by default", function(){
-            expect(scope.data.length > 0).toEqual(true);
+            expect(scope.mainControl.data.length > 0).toEqual(true);
         });
 
         it("should be able to remove an item from the list", function(){
-           var initialLength = scope.data.length;
-           scope.removeData(1);
-           expect(scope.data.length < initialLength).toEqual(true);
+           var initialLength = scope.mainControl.data.length;
+           scope.mainControl.removeData(1);
+           expect(scope.mainControl.data.length < initialLength).toEqual(true);
         });
 
         it("should be able to add an item to the list", function(){
-            var initialLength = scope.data.length;
-            scope.textField = "kittens";
-            scope.addData();
-            expect(scope.data.length > initialLength).toEqual(true);
+            var initialLength = scope.mainControl.data.length;
+            scope.mainControl.textField = "kittens";
+            scope.mainControl.addData();
+            expect(scope.mainControl.data.length > initialLength).toEqual(true);
         });
     });
 });
@@ -51,7 +51,7 @@ describe('Testing controller: navbarCtrl', function(){
     // Initialize the controller and mock scope.
     beforeEach(inject(function($controller, $rootScope) {
         scope = $rootScope.$new();
-        mainCtrl = $controller('navbarCtrl', {
+        mainCtrl = $controller('navbarCtrl as navbar', {
             $scope: scope
         });
     }));
@@ -61,6 +61,6 @@ describe('Testing controller: navbarCtrl', function(){
     });
 
     it('should contain pages', function(){
-      expect(scope.pages.length > 0).toEqual(true);
+      expect(scope.navbar.pages.length > 0).toEqual(true);
     });
 });
