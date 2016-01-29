@@ -14,10 +14,10 @@ questions by editing this file.
 
 ##### List all the files at the top level of your project (i.e. not in public) and briefly state the purpose of each one, as you understand it. You might want to postpone describing some files until you work with the project a bit more. 
 ##### List the folders in the public folder and describe the purpose for each.
-##### Open the file main.controller.js in the javascript folder of public. What are the controllers there (by name)? 
-##### Open the index.html view. What controller is it using? 
+##### What are the names of the Angular controllers in this web application? What does each of them do?
+##### Open the index.html view. What controller(s) is it using? 
 ##### Where is the navigation bar included in the source code for index.html? 
-##### Add a pet to the array, data (in the controller). See the change on the web page (you need to reload, but not restart). 
+##### Add a pet to the array, data (in the appropriate controller). See the change on the web page (you need to reload, but not restart). 
 ##### How are new items added and deleted through the web page? (i.e. - What functions from the main controller are used in index.html, and what Angular directives allow them to interact with the view?)
 ##### Open navbar.html view. What is its purpose? How would you go about adding links to the navigation bar? 
 ##### Find two instances of use of bootstrap (see above) in either navbar view or index view or both; explain what is formatted. 
@@ -41,5 +41,7 @@ questions by editing this file.
 - As before, use TDD for all the helper functions (you may reuse the tests from the previous lab). Now they will all be located in public (client-side). No need to modify karma files since it's already testing client-side javascript. 
 - Use different color for displaying the GPA, depending on whether it is below 2.0, between 2.0 and 3.0, and 3.0 and above. Use your own CSS or bootstrap. 
 - Perform simple data validation (add the corresponding function to the controller) so that invalid entries (invalid grades or wrong number of credits) are not added to the model. An error message needs to be displayed to the user). 
+
+##### When you're done with the lab, take a look at your test coverage report and make a note here about what pieces of code are covered well, what isn't, and why this is the case.
 
 
