@@ -1,20 +1,5 @@
-var mainApp = angular.module("mainApp", []);
-
-//====================== NAVBAR CONTROLLER ============================
-    mainApp.controller('navbarCtrl', function(){
-        var navbar = this;
-        console.log("Navbar controller loaded");
-
-        navbar.pages = [
-            {text: "Home", link: '/'},
-            {text: "About", link: '/about'},
-            {text: "Kittens", link: '/kittens'},
-            {text: "404 Page", link: '/wefwrtbertbeb'}
-        ];
-    });
-
 //==================== MAIN CONTROLLER ==================================
-    mainApp.controller('mainCtrl', function(){
+    angular.module('stdControllers').controller('mainCtrl', function(){
         var mainControl = this;
         console.log("Main controller loaded!");
 
