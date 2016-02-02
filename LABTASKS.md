@@ -53,6 +53,8 @@ btn btn-primary makes a button
 
 ##### Stop the server by pressing Ctrl-C in the terminal, type "grunt test" to run tests. Where are the tests located?
 
+main.controller.spec.js and clientJavascript.spec.js
+
 ## Part #2: modifying the project.
 
 - Set up Travis CI and add the build status icon to your project's README.
