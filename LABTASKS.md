@@ -41,9 +41,14 @@ app.js in the javascript folder is essentially the client side, while the app.js
 ##### Add a pet to the array, data (in the appropriate controller). See the change on the web page (you need to reload, but not restart).
 we added "chimp"
 ##### How are new items added and deleted through the web page? (i.e. - What functions from the main controller are used in index.html, and what Angular directives allow them to interact with the view?)
-##### Open navbar.html view. What is its purpose? How would you go about adding links to the navigation bar? 
+The functions from the main controller used in index.html are mainControl.addData, mainControl.data, mainControl.removeData and mainControl.items in list.
+The Angular directives that allow them to interact with the view are ng-submit, ng-model, and ng-repeat.
+##### Open navbar.html view. What is its purpose? How would you go about adding links to the navigation bar?
+navbar.html translates what is in the controller to a viewable aspect of the website. To add links to the navigation bar you would go into navbar.controller and add another element to the array.
+ex: {text: "PageName", link: '/pagename'} (Note: You would want to separate this element from the preceding and succeeding elements with a comma.)
 ##### Find two instances of use of bootstrap (see above) in either navbar view or index view or both; explain what is formatted. 
-
+glyphicon glyphicon-trash makes a trash icon
+btn btn-primary makes a button
 >Protip: Bootstrap is awesome. Start using it. Seriously. This allows you to do fancy things with styling (CSS) with very little effort. Think back to lab 1. http://getbootstrap.com/components/ <- Regular Bootstrap. https://angular-ui.github.io/bootstrap/ <- Angular Bootstrap. These offer separate functionality and both can be used simultaneously.
 
 ##### Stop the server by pressing Ctrl-C in the terminal, type "grunt test" to run tests. Where are the tests located?
