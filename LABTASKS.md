@@ -39,7 +39,7 @@ stdControllers and mainApp
 ##### Notice, the code controlling the Node.js server is in a file also called app.js. There is no particular reason for this other than a generator we will use later on follows the same convention. Explain the difference between the purpose of the files (think client vs server).
 app.js in the javascript folder is essentially the client side, while the app.js in the top level is the server side
 ##### Add a pet to the array, data (in the appropriate controller). See the change on the web page (you need to reload, but not restart).
-
+we added "chimp"
 ##### How are new items added and deleted through the web page? (i.e. - What functions from the main controller are used in index.html, and what Angular directives allow them to interact with the view?)
 ##### Open navbar.html view. What is its purpose? How would you go about adding links to the navigation bar? 
 ##### Find two instances of use of bootstrap (see above) in either navbar view or index view or both; explain what is formatted. 
