@@ -23,9 +23,17 @@ questions by editing this file.
  package.json - contains information about the project
  README.md - contains instructions for setting up lab
 ##### List the folders in the public folder and describe the purpose for each.
+assets - contains images used for website
+css - contains css files (css files are used for formatting the webpages)
+javascript - contains javascript files that run the interactivity of the website, also includes the controllers
+views - contains the html files that display the webpages
 ##### What are the names of the Angular controllers in this web application? What does each of them do?
-##### Open the index.html view. What controller(s) is it using? 
-##### Where is the navigation bar included in the source code for index.html? 
+main.controller.js controls the list in the main page
+navbar.controller.js controls the navbar for the page
+##### Open the index.html view. What controller(s) is it using?
+main.controller.js and navbar.controller.js
+##### Where is the navigation bar included in the source code for index.html?
+in the body in the first div
 ##### app.js within public/javascript is where your Angular modules are located at. What modules does the project currently have?
 ##### Notice, the code controlling the Node.js server is in a file also called app.js. There is no particular reason for this other than a generator we will use later on follows the same convention. Explain the difference between the purpose of the files (think client vs server).
 ##### Add a pet to the array, data (in the appropriate controller). See the change on the web page (you need to reload, but not restart). 
