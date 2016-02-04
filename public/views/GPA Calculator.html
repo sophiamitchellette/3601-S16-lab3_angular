@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>GPA Calculator</title>
+
+    <!-- Loading Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap/dist/css/bootstrap.css">
+    <!-- this makes the bootstrap.css visible to WebStorm so that it can provide suggestions for code completion -->
+    <link rel="stylesheet" type="text/css" href="../../bootstrap/dist/css/bootstrap.css">
+
+    <!-- Loading Javascript Stuff -->
+    <script type="text/javascript" src="javascript/clientJavascript.js"></script>
+    <script type="text/javascript" src="angularjs/angular.js"></script>
+
+    <script type="text/javascript" src="javascript/app.js"></script>
+    <script type="text/javascript" src="javascript/main.controller.js"></script>
+    <script type="text/javascript" src="javascript/navbar.controller.js"></script>
+    <script type="text/javascript" src="javascript/footer.controller.js"></script>
+</head>
+
+<body ng-app="mainApp" ng-controller="mainCtrl as mainControl">
+
+<div ng-include="'views/navbar.html'"></div>
+
+<div class="container">
+    <ul class="list-group">
+        <li class="list-group-item">
+
+            <form ng-submit="mainControl.addClasses()">
+                <input ng-model="mainControl.classNames" type="text" size="50" placeholder="add a class">
+                <input ng-model="mainControl.classCredits" type="text" size="50" placeholder="add the credit load">
+                <input ng-model="mainControl.classGrades" type="text" size="50" placeholder="add the grade">
+                <input type="submit" value="submit" class="btn btn-primary">
+                <span class="floatRight">Your GPA: {{mainControl.gpaCalc()}}</span>
+            </form>
+
+
+        </li>
+        <li class="list-group-item" ng-repeat="test in mainControl.gpadata">{{test.text}}<span class="glyphicon glyphicon-trash floatRight" style="color: red" ng-click="mainControl.removeData2($index)"></span></li>
+    </ul>
+</div>
+
+</body>
+</html>
