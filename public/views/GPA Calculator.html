@@ -33,12 +33,14 @@
                 <input ng-model="mainControl.classCredits" type="text" size="50" placeholder="add the credit load">
                 <input ng-model="mainControl.classGrades" type="text" size="50" placeholder="add the grade">
                 <input type="submit" value="submit" class="btn btn-primary">
-                <span class="floatRight">Your GPA: {{mainControl.gpaCalc()}}</span>
+
             </form>
 
 
         </li>
-        <li class="list-group-item" ng-repeat="test in mainControl.gpadata">{{test.text}}<span class="glyphicon glyphicon-trash floatRight" style="color: red" ng-click="mainControl.removeData2($index)"></span></li>
+        <li class="list-group-item" ng-repeat="test in mainControl.gpadata">{{test.Class}} {{test.Credits}} {{test.Grade}}<span class="glyphicon glyphicon-trash floatRight" style="color: red" ng-click="mainControl.removeData2($index)"></span></li>
+
+        <span class="floatRight">Your GPA: {{mainControl.calculateGPA()}}</span>
     </ul>
 </div>
 

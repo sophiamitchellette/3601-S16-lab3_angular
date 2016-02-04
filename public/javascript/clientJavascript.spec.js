@@ -15,34 +15,23 @@ describe('testing basic functions', function(){
 describe('testing for GPA calculator', function(){
 
     it('should return a 4.0', function(){
-        expect(calculateGPA(["Class: French Credits: 4 Grade: A", "Class: Math Credits: 5 Grade: A", "Class: Science Credits: 4 Grade: A"])).toEqual(4.0);
+        expect(calculateGPA([{Class: "French", Credits: "4", Grade: "A"}, {Class: "Math", Credits: "5", Grade: "A"}, {Class: "Science", Credits: "4", Grade: "A"}])).toEqual(4.0);
     });
 
     it('should return a 3.0', function(){
-        expect(calculateGPA(["Class: French Credits: 4 Grade: A", "Class: Math Credits: 5 Grade: B", "Class: Science Credits: 4 Grade: C"])).toEqual(3.0);
+        expect(calculateGPA([{Class: "French", Credits: "4", Grade: "A"}, {Class: "Math", Credits: "5", Grade: "B"}, {Class: "Science", Credits: "4", Grade: "C"}])).toEqual(3.0);
     });
 
 
     it('should return a 2.0', function(){
-        expect(calculateGPA(["Class: French Credits: 4 Grade: B", "Class: Math Credits: 5 Grade: C", "Class: Science Credits: 4 Grade: D"])).toEqual(2.0);
+        expect(calculateGPA([{Class: "French", Credits: "4", Grade: "B"}, {Class: "Math", Credits: "5", Grade: "C"}, {Class: "Science", Credits: "4", Grade: "D"}])).toEqual(2.0);
     });
 
     it('should return a 0.0', function(){
-        expect(calculateGPA(["Class: French Credits: 4 Grade: F", "Class: Math Credits: 5 Grade: F", "Class: Science Credits: 4 Grade: F"])).toEqual(0.0);
+        expect(calculateGPA([{Class: "French", Credits: "4", Grade: "F"}, {Class: "Math", Credits: "5", Grade: "F"}, {Class: "Science", Credits: "4", Grade: "F"}])).toEqual(0.0);
     });
 });
 
-describe('testing for findCredits and findGrades', function(){
-
-    it('should return credit number', function(){
-        expect(findCredits("Class: French Credits: 5 Grade: A")).toEqual(5);
-    });
-    it('should return grade weight', function(){
-        expect(findGrades("Class: French Credits: 5 Grade: A")).toEqual(4.0);
-    });
-
-
-});
 
 //testing for gradeToNumber
 describe('testing for gradeToNumber', function(){

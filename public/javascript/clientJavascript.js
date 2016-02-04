@@ -54,27 +54,21 @@ var gradeToNumber = function(gr){
 
 };
 
-var findCredits = function(str){
-    var n = 9 + str.indexOf("Credits: ");
-    return parseInt(str.substring(n, n+1));
-}
 
-var findGrades = function(str){
-    var n = 7 + str.indexOf("Grade: ");
-    return gradeToNumber(str.substring(n, n+1));
-}
+
+
 
 //takes in the three grades and their respective credit hours and returns GPA
-var calculateGPA = function(list){
+var calculateGPA = function(gpadata){
     var qualityPoints = 0;
     var totalCredits = 0;
-    for(i = 0; i < list.length; i++){
-        qualityPoints = qualityPoints + (findCredits(list[i]) * findGrades(list[i]));
-        totalCredits = totalCredits + findCredits(list[i]);
+    for(i = 0; i < gpadata.length; i++){
+        qualityPoints = qualityPoints + (parseInt(gpadata[i].Credits) * gradeToNumber(gpadata[i].Grade));
+        totalCredits = totalCredits + parseInt(gpadata[i].Credits);
     }
 
 
-    return Math.round(qualityPoints/totalCredits);
+    return Math.round(qualityPoints/totalCredits * 100)/100;
 
 };
 

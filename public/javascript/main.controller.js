@@ -46,34 +46,36 @@
         mainControl.classGrades = "";
 
         mainControl.gpadata = [
-            {text: "Class: French Credits: 5 Grade: A"}
+            {Class: "French", Credits: "5", Grade: "A"}
 
         ];
 
         mainControl.addClasses = function(){
             if(mainControl.classNames.length >= 1) {
-                mainControl.gpadata.push({text: "Class: " + mainControl.classNames + " Credits: " + mainControl.classCredits + " Grade: " + mainControl.classGrades});
+                mainControl.gpadata.push({Class: mainControl.classNames, Credits: mainControl.classCredits, Grade: mainControl.classGrades});
                 mainControl.classNames = "";
-            }
-        };
-
-        mainControl.addCredits = function(){
-            if(mainControl.classCredits.length >= 1) {
-                mainControl.gpadata.push({text: mainControl.classCredits});
                 mainControl.classCredits = "";
-            }
-        };
-
-        mainControl.addGrades = function(){
-            if(mainControl.classGrades.length >= 1) {
-                mainControl.gpadata.push({text: mainControl.classGrades});
                 mainControl.classGrades = "";
             }
         };
 
-        mainControl.gpaCalc = function(gpadata){
-            return {text: "Your GPA is: "};
+
+        //takes in the three grades and their respective credit hours and returns GPA
+        mainControl.calculateGPA = function(){
+            var qualityPoints = 0;
+            var totalCredits = 0;
+            for(i = 0; i < mainControl.gpadata.length; i++){
+                qualityPoints = qualityPoints + (parseInt(mainControl.gpadata[i].Credits) * gradeToNumber(mainControl.gpadata[i].Grade));
+                totalCredits = totalCredits + parseInt(mainControl.gpadata[i].Credits);
+            }
+
+
+            return Math.round(qualityPoints/totalCredits * 100)/100;
+
         };
+
+
+
 
         mainControl.removeData2 = function(index){
             mainControl.gpadata.splice(index, 1);
