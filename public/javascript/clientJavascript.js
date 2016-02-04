@@ -55,12 +55,12 @@ var gradeToNumber = function(gr){
 };
 
 var findCredits = function(str){
-    var n = 8 + str.indexOf("Credits: ");
+    var n = 9 + str.indexOf("Credits: ");
     return parseInt(str.substring(n, n+1));
 }
 
 var findGrades = function(str){
-    var n = 6 + str.indexOf("Credits: ");
+    var n = 7 + str.indexOf("Grade: ");
     return gradeToNumber(str.substring(n, n+1));
 }
 

@@ -46,6 +46,7 @@
         mainControl.classGrades = "";
 
         mainControl.gpadata = [
+            {text: "Class: French Credits: 5 Grade: A"}
 
         ];
 
@@ -70,8 +71,8 @@
             }
         };
 
-        mainControl.gpaCalc = function(){
-            return calculateGPA();
+        mainControl.gpaCalc = function(gpadata){
+            return {text: "Your GPA is: "};
         };
 
         mainControl.removeData2 = function(index){
