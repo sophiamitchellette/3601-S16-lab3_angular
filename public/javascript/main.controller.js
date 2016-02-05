@@ -46,7 +46,8 @@
         mainControl.classGrades = "";
 
         mainControl.gpadata = [
-            {Class: "French", Credits: "5", Grade: "A"}
+            {Class: "French", Credits: "5", Grade: "A"},
+            {Class: "Math", Credits: "5", Grade: "B"}
 
         ];
 
@@ -75,7 +76,22 @@
         };
 
 
+        mainControl.colorChange = function(){
 
+            if(mainControl.calculateGPA() > 3.0){
+                document.getElementById("gpaDisplay").style.color = 'green';
+            }
+            else if(mainControl.calculateGPA() > 2.0){
+                document.getElementById("gpaDisplay").style.color = 'yellow';
+            }
+            else if(mainControl.calculateGPA() > 1.0){
+                document.getElementById("gpaDisplay").style.color = 'orange';
+            }
+            else{
+                document.getElementById("gpaDisplay").style.color = 'red';
+            }
+
+        }
 
         mainControl.removeData2 = function(index){
             mainControl.gpadata.splice(index, 1);

@@ -34,3 +34,7 @@ footer {
     padding-left: 50px;
     background-color: lightblue;
 }
+
+#gpaDisplay {
+    float: right;
+}
