@@ -54,7 +54,7 @@
 
         //adds classes, credits and grade to the list gpadata so long as all fields have something in them and are not in error
         mainControl.addClasses = function(){
-            if((mainControl.classNames.length >= 1) && (mainControl.classCredits.length >= 1) && (mainControl.classGrades.length >= 1) && !(isErrorCredits(mainControl.classCredits))) {
+            if((mainControl.classNames.length >= 1) && (mainControl.classCredits.length >= 1) && (mainControl.classGrades.length >= 1) && !(isErrorCredits(mainControl.classCredits))  && !(isErrorGrades(mainControl.classGrades))) {
                 mainControl.gpadata.push({Class: mainControl.classNames, Credits: mainControl.classCredits, Grade: mainControl.classGrades});
                 mainControl.classNames = "";
                 mainControl.classCredits = "";
@@ -80,34 +80,16 @@
         //determines if fields credits and grades are in error, if so, returns an error message to be displayed
         mainControl.returnError = function(){
             if(isErrorCredits(mainControl.classCredits) && isErrorGrades(mainControl.classGrades)){
-                return "Not a number and not a valid grade.";
+                return "Credit value entered is not a number and grade entered is not a valid grade. Credit value must be a number and grades can be A, B, C, D or F.";
             }
             else if(isErrorGrades(mainControl.classGrades)){
-                return "Not a valid grade.";
+                return "Grade entered is not a valid grade. Grades can be A, B, C, D or F.";
             }
             else if(isErrorCredits(mainControl.classCredits)){
-                return "Not a number.";
+                return "Credit value entered is not a number. Credit value must be a number.";
             }
         };
 
-
-        //function to determine correct color
-        mainControl.colorChange = function(){
-
-            if(mainControl.calculateGPA() > 3.0){
-                document.getElementById("gpaDisplay").style.color = 'green';
-            }
-            else if(mainControl.calculateGPA() > 2.0){
-                document.getElementById("gpaDisplay").style.color = 'yellow';
-            }
-            else if(mainControl.calculateGPA() > 1.0){
-                document.getElementById("gpaDisplay").style.color = 'orange';
-            }
-            else{
-                document.getElementById("gpaDisplay").style.color = 'red';
-            }
-
-        };
 
         //removes items from gpadata
         mainControl.removeData2 = function(index){

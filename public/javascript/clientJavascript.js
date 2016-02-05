@@ -58,7 +58,6 @@ var gradeToNumber = function(gr){
 
 
 
-
 //determines if credits entry is in error, if it is returns true, if it is not returns false
 //allows for partial credits, just in case that's a thing
 var isErrorCredits = function(cr) {

@@ -42,7 +42,12 @@
         <li class="list-group-item" ng-repeat="test in mainControl.gpadata">{{test.Class}} {{test.Credits}} {{test.Grade}}<span class="glyphicon glyphicon-trash floatRight" style="color: red" ng-click="mainControl.removeData2($index)"></span></li>
 
 
-            <span id="gpaDisplay">Your GPA: {{mainControl.calculateGPA()}}</span>
+
+                     <span class="floatRight" ng-class="{green: mainControl.calculateGPA() >= 3, yellow: (mainControl.calculateGPA() >= 2) && (mainControl.calculateGPA() < 3), orange: (mainControl.calculateGPA() >= 1) && (mainControl.calculateGPA() < 2), red: (mainControl.calculateGPA() < 1)}">Your GPA: {{mainControl.calculateGPA()}}</span>
+
+
+
+
             <span> {{mainControl.returnError()}}</span>
 
 
