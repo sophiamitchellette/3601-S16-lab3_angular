@@ -41,16 +41,18 @@
             return mainControl.data.length;
         };
 
+        //text fields for class, the class's credits and the class's grade
         mainControl.classNames = "";
         mainControl.classCredits = "";
         mainControl.classGrades = "";
 
+        //array where classes are stored
+        //initialized as empty
         mainControl.gpadata = [
-            {Class: "French", Credits: "5", Grade: "A"},
-            {Class: "Math", Credits: "5", Grade: "B"}
 
         ];
 
+        //adds classes, credits and grade to the list gpadata so long as all fields have something in them and are not in error
         mainControl.addClasses = function(){
             if((mainControl.classNames.length >= 1) && (mainControl.classCredits.length >= 1) && (mainControl.classGrades.length >= 1) && !(isErrorCredits(mainControl.classCredits))) {
                 mainControl.gpadata.push({Class: mainControl.classNames, Credits: mainControl.classCredits, Grade: mainControl.classGrades});
@@ -75,6 +77,7 @@
 
         };
 
+        //determines if fields credits and grades are in error, if so, returns an error message to be displayed
         mainControl.returnError = function(){
             if(isErrorCredits(mainControl.classCredits) && isErrorGrades(mainControl.classGrades)){
                 return "Not a number and not a valid grade.";
@@ -106,6 +109,7 @@
 
         };
 
+        //removes items from gpadata
         mainControl.removeData2 = function(index){
             mainControl.gpadata.splice(index, 1);
         };

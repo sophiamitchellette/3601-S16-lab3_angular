@@ -58,7 +58,7 @@ var gradeToNumber = function(gr){
 
 
 
-//takes in the three grades and their respective credit hours and returns GPA
+//takes in grades and their respective credit hours and returns GPA
 var calculateGPA = function(gpadata){
     var qualityPoints = 0;
     var totalCredits = 0;
@@ -72,13 +72,16 @@ var calculateGPA = function(gpadata){
 
 };
 
+//determines if credits entry is in error, if it is returns true, if it is not returns false
+//allows for partial credits, just in case that's a thing
 var isErrorCredits = function(cr) {
     if (Number(cr) == cr) {
         return false;
     }
     return true;
-}
+};
 
+//determines if grade entry is in error, if it is returns true, if it is not returns false
 var isErrorGrades = function(gr) {
     console.log(gr);
     if ((gr == "A") || (gr == "B") || (gr == "C") || (gr == "D") || (gr == "F") || (gr == "")) {
@@ -86,4 +89,4 @@ var isErrorGrades = function(gr) {
 
     }
     return true;
-}
+};
