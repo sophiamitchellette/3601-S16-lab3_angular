@@ -58,19 +58,6 @@ var gradeToNumber = function(gr){
 
 
 
-//takes in grades and their respective credit hours and returns GPA
-var calculateGPA = function(gpadata){
-    var qualityPoints = 0;
-    var totalCredits = 0;
-    for(i = 0; i < gpadata.length; i++){
-        qualityPoints = qualityPoints + (parseInt(gpadata[i].Credits) * gradeToNumber(gpadata[i].Grade));
-        totalCredits = totalCredits + parseInt(gpadata[i].Credits);
-    }
-
-
-    return Math.round(qualityPoints/totalCredits * 100)/100;
-
-};
 
 //determines if credits entry is in error, if it is returns true, if it is not returns false
 //allows for partial credits, just in case that's a thing
