@@ -69,7 +69,6 @@ var isErrorCredits = function(cr) {
 
 //determines if grade entry is in error, if it is returns true, if it is not returns false
 var isErrorGrades = function(gr) {
-    console.log(gr);
     if ((gr == "A") || (gr == "B") || (gr == "C") || (gr == "D") || (gr == "F") || (gr == "")) {
         return false;
 
