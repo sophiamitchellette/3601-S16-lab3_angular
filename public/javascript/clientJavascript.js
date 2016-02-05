@@ -72,4 +72,18 @@ var calculateGPA = function(gpadata){
 
 };
 
+var isErrorCredits = function(cr) {
+    if (Number(cr) == cr) {
+        return false;
+    }
+    return true;
+}
 
+var isErrorGrades = function(gr) {
+    console.log(gr);
+    if ((gr == "A") || (gr == "B") || (gr == "C") || (gr == "D") || (gr == "F") || (gr == "")) {
+        return false;
+
+    }
+    return true;
+}

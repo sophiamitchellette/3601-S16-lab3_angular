@@ -52,7 +52,7 @@
         ];
 
         mainControl.addClasses = function(){
-            if(mainControl.classNames.length >= 1) {
+            if((mainControl.classNames.length >= 1) && (mainControl.classCredits.length >= 1) && (mainControl.classGrades.length >= 1) && !(isErrorCredits(mainControl.classCredits))) {
                 mainControl.gpadata.push({Class: mainControl.classNames, Credits: mainControl.classCredits, Grade: mainControl.classGrades});
                 mainControl.classNames = "";
                 mainControl.classCredits = "";
@@ -75,6 +75,19 @@
 
         };
 
+        mainControl.returnError = function(){
+            if(isErrorCredits(mainControl.classCredits) && isErrorGrades(mainControl.classGrades)){
+                return "Not a number and not a valid grade.";
+            }
+            else if(isErrorGrades(mainControl.classGrades)){
+                return "Not a valid grade.";
+            }
+            else if(isErrorCredits(mainControl.classCredits)){
+                return "Not a number.";
+            }
+        }
+
+
 
         mainControl.colorChange = function(){
 
@@ -96,6 +109,8 @@
         mainControl.removeData2 = function(index){
             mainControl.gpadata.splice(index, 1);
         };
+
+
 
 
     });

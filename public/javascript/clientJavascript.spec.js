@@ -49,3 +49,46 @@ describe('testing for gradeToNumber', function(){
     });
 });
 
+describe('testing for credits error', function(){
+
+    it('A return true', function(){
+        expect(isErrorCredits("A")).toBe(true);
+    });
+
+    it('5 return false', function(){
+        expect(isErrorCredits("5")).toBe(false);
+    });
+
+    it('A5 return true', function(){
+        expect(isErrorCredits("A5")).toBe(true);
+    });
+
+    it('5.5 return false', function(){
+        expect(isErrorCredits("5.5")).toBe(false);
+    });
+
+});
+
+describe('testing for grades error', function(){
+
+    it('A return false', function(){
+        expect(isErrorGrades("A")).toBe(false);
+    });
+
+    it('B return false', function(){
+        expect(isErrorGrades("B")).toBe(false);
+    });
+
+    it('5 return true', function(){
+        expect(isErrorGrades("5")).toBe(true);
+    });
+
+    it('A- return true', function(){
+        expect(isErrorGrades("A-")).toBe(true);
+    });
+
+    it('B5 return true', function(){
+        expect(isErrorGrades("B5")).toBe(true);
+    });
+
+});
