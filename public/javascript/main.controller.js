@@ -85,10 +85,10 @@
             else if(isErrorCredits(mainControl.classCredits)){
                 return "Not a number.";
             }
-        }
+        };
 
 
-
+        //function to determine correct color
         mainControl.colorChange = function(){
 
             if(mainControl.calculateGPA() > 3.0){
@@ -104,7 +104,7 @@
                 document.getElementById("gpaDisplay").style.color = 'red';
             }
 
-        }
+        };
 
         mainControl.removeData2 = function(index){
             mainControl.gpadata.splice(index, 1);
