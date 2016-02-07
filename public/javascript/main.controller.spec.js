@@ -31,6 +31,11 @@ describe('Testing controller: mainCtrl', function(){
            expect(scope.mainControl.data.length < initialLength).toEqual(true);
         });
 
+        it("should return the number of items in the list", function(){
+            var initialLength = scope.mainControl.data.length;
+            expect(scope.mainControl.itemsInList()).toEqual(initialLength);
+        });
+
         it("should be able to add an item to the list", function(){
             var initialLength = scope.mainControl.data.length;
             scope.mainControl.textField = "kittens";
@@ -63,6 +68,42 @@ describe('Testing controller: mainCtrl', function(){
             expect(scope.mainControl.gpadata.length <= initialLength).toEqual(true);
         });
 
+        describe('testing for returnError', function(){
+
+            it('should return no errors', function(){
+                scope.mainControl.classNames = "French";
+                scope.mainControl.classGrades = "A";
+                scope.mainControl.classCredits = "4";
+                expect(scope.mainControl.returnError()).toEqual("");
+
+            });
+
+            it('should return error for credits', function(){
+                scope.mainControl.classNames = "French";
+                scope.mainControl.classGrades = "A";
+                scope.mainControl.classCredits = "sdfdsfd5";
+                expect(scope.mainControl.returnError()).toEqual("Credit value entered is not a number. Credit value must be a number.");
+
+            });
+
+            it('should return error for grades', function(){
+                scope.mainControl.classNames = "French";
+                scope.mainControl.classGrades = "dflsd";
+                scope.mainControl.classCredits = "4";
+                expect(scope.mainControl.returnError()).toEqual("Grade entered is not a valid grade. Grades can be A, B, C, D or F.");
+
+            });
+
+            it('should return error for credits and grades', function(){
+                scope.mainControl.classNames = "French";
+                scope.mainControl.classGrades = "fdsf";
+                scope.mainControl.classCredits = "fdf";
+                expect(scope.mainControl.returnError()).toEqual("Credit value entered is not a number and grade entered is not a valid grade. Credit value must be a number and grades can be A, B, C, D or F.");
+
+            });
+
+
+        });
 
 
 

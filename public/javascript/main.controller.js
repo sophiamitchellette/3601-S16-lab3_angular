@@ -88,6 +88,9 @@
             else if(isErrorCredits(mainControl.classCredits)){
                 return "Credit value entered is not a number. Credit value must be a number.";
             }
+            else{
+                return "";
+            }
         };
 
 
